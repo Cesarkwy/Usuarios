@@ -4,6 +4,7 @@ const {
     PORT,
     pgConnection
 } = process.env;
+
 module.exports = {
     port: PORT,
     urlConnection: pgConnection
