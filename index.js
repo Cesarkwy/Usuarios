@@ -27,9 +27,6 @@ app.get("/", (req, res) => {
     console.log("Response ok.");
     res.send("Ok - Servidor disponível.");
 });
-app.listen(config.port, () =>
-    console.log("Servidor funcionando na porta " + config.port)
-);
 
 app.get("/usuarios", (req, res) => {
     try {
@@ -134,5 +131,9 @@ app.put("/usuarios/:id", (req, res) => {
         console.error(erro);
     }
 });
+
+app.listen(config.port, () =>
+    console.log("Servidor funcionando na porta " + config.port)
+);
 
 module.exports = app;
